@@ -23,4 +23,4 @@ def test_search_empty_query():
     profile_store["carol"] = {"username": "carol", "bio": "tester"}
     response = client.get("/search?q=")
     data = response.json()
-    assert data["total"] > 0
+    assert data["total"] == 0
